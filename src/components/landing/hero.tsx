@@ -44,6 +44,12 @@ const Hero = () => {
                   answered instantly
                 </span>
               </h1>
+
+              {/* SUBTITLE */}
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-medium">
+                  Chat with our AI dental assistant for instant advice, book smart appointments, and
+                  get personalized care recommendations. Available 24/7.
+                </p>
             </div>
           </div>
         </div>
