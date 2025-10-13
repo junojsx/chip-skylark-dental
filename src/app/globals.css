@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+
   --background: #f9fafb;
   --foreground: #2e3338;
   --card: #ffffff;
@@ -206,3 +207,12 @@ body {
     cursor: pointer;
   }
 }
+
+.cl-formFieldInputShowPasswordIcon {
+  fill: #0a624f
+}
+/* .cl-internal-2iusy0 {
+  color: #000000
+} */
+
+

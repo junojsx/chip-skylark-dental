@@ -1,3 +1,7 @@
+import { SignUpButton } from "@clerk/nextjs";
+import { Button } from "../ui/button";
+import { Calendar, MicIcon } from "lucide-react";
+
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden pt-20">
@@ -50,6 +54,16 @@ const Hero = () => {
                   Chat with our AI dental assistant for instant advice, book smart appointments, and
                   get personalized care recommendations. Available 24/7.
                 </p>
+            </div>
+            {/* Call to Action */}
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <SignUpButton mode="modal">
+                <Button><MicIcon /> Talk to Chip</Button>
+              </SignUpButton>
+              <SignUpButton mode="modal">
+                <Button variant={"ghost"}><Calendar /> Book an Appointment</Button>
+              </SignUpButton>
             </div>
           </div>
         </div>
