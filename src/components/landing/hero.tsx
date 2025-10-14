@@ -1,6 +1,6 @@
 import { SignUpButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
-import { Calendar, MicIcon } from "lucide-react";
+import { Calendar, MicIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 
 const Hero = () => {
@@ -111,6 +111,25 @@ const Hero = () => {
                     height={48}
                     className="w-12 h-12 rounded-full object-cover ring-4 ring-background"
                   />
+                </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <StarIcon
+                          key={star}
+                          className="w-4 h-4 text-yellow-400 fill-yellow-400"
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm font-medium text-foreground">
+                      5.0 Rating
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium text-muted-foreground">
+                    Loved by over 5,000 patients
+                  </p>
                 </div>
               </div>
             </div>
