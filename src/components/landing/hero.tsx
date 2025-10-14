@@ -1,6 +1,7 @@
 import { SignUpButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import { Calendar, MicIcon } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -50,20 +51,68 @@ const Hero = () => {
               </h1>
 
               {/* SUBTITLE */}
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-medium">
-                  Chat with our AI dental assistant for instant advice, book smart appointments, and
-                  get personalized care recommendations. Available 24/7.
-                </p>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-medium">
+                Chat with our AI dental assistant for instant advice, book smart
+                appointments, and get personalized care recommendations.
+                Available 24/7.
+              </p>
             </div>
             {/* Call to Action */}
 
             <div className="flex flex-col sm:flex-row gap-4">
               <SignUpButton mode="modal">
-                <Button><MicIcon /> Talk to Chip</Button>
+                <Button>
+                  <MicIcon /> Talk to Chip
+                </Button>
               </SignUpButton>
               <SignUpButton mode="modal">
-                <Button variant={"ghost"}><Calendar /> Book an Appointment</Button>
+                <Button variant={"ghost"}>
+                  <Calendar /> Book an Appointment
+                </Button>
               </SignUpButton>
+            </div>
+
+            {/* Customer Reviews */}
+            <div className="pt-8">
+              <div className="flex items-center gap-6">
+                <div className="flex -space-x-3">
+                  <Image
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face"
+                    alt="Jessica Davis"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover ring-4 ring-background"
+                  />
+                  <Image
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
+                    alt="Sam Miller"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover ring-4 ring-background"
+                  />
+                  <Image
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face"
+                    alt="Anna Lopez"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover ring-4 ring-background"
+                  />
+                  <Image
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&crop=face"
+                    alt="Mike Rodriguez"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover ring-4 ring-background"
+                  />
+                  <Image
+                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=100&h=100&fit=crop&crop=face"
+                    alt="Katie Lee"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover ring-4 ring-background"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
