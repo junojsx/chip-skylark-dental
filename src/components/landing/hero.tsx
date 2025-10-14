@@ -148,7 +148,7 @@ const Hero = () => {
               alt=""
               width={600}
               height={600}
-              className=" w-42 md:w-50 lg:w-full h-auto "
+              className="w-70 md:w-100 lg:w-200 h-auto "
             />
           </div>
           {/* End of Right Content */}

@@ -1,4 +1,7 @@
+import { SignUpButton } from "@clerk/nextjs";
 import {
+  ArrowRight,
+  ArrowRightIcon,
   BrainIcon,
   Calendar,
   CalendarIcon,
@@ -7,10 +10,11 @@ import {
   ZapIcon,
 } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const HowItWorks = () => {
   return (
-    <section className=" relative py-32 px-6 outline-hidden z-10 mx-auto max-w-7xl">
+    <section className="h-full relative py-32 px-6 outline-hidden z-10 mx-auto max-w-7xl">
       {/* Header Section */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10 backdrop-blur-sm mb-6">
@@ -150,6 +154,15 @@ const HowItWorks = () => {
             </div>{" "}
           </div>
         </div>
+      </div>
+
+      <div className="text-center mt-16 rounded-full">
+        <SignUpButton mode="modal">
+          <Button variant={"default"} size={"lg"}>
+            Get Started
+            <ArrowRightIcon className="mr-2 size-5" />
+          </Button>
+        </SignUpButton>
       </div>
     </section>
   );
