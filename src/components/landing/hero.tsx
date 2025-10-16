@@ -144,11 +144,11 @@ const Hero = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl rotate-45 blur-xl"></div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-2xl"></div>
             <Image
-              src={"/chip.png"}
+              src={"/welcome.png"}
               alt=""
               width={600}
               height={600}
-              className="w-70 md:w-100 lg:w-200 h-auto "
+              className="w-80 md:w-100 lg:w-300 h-auto "
             />
           </div>
           {/* End of Right Content */}
