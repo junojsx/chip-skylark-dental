@@ -87,8 +87,8 @@ const FooterPage = () => {
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; 2024 DentWise. Built for real people with real dental
-            questions.
+            &copy; 2024 Chip Skylark Dental. Built for real people with real
+            dental questions.
           </p>
         </div>
       </div>
