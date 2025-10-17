@@ -16,10 +16,10 @@ const Hero = () => {
         <div className="absolute top-20 left-1/4 w-72 h-72 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gradient-to-r from-primary/15 to-primary/5 rounded-full blur-3xl" />
         {/* End of Gradient Orbs */}
-        <div className="flex flex-col-reverse lg:flex-row items-center w-400 mx-auto max-w-7xl">
+        <div className="flex flex-col-reverse lg:flex-row items-center w-700 mx-auto max-w-7xl">
           <div className="relative z-10 w-full px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-1 gap-16 items-center">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-1 gap-6 items-center">
                 {/* left side */}
                 <div className="space-y-10">
                   <div className="space-y-6">
@@ -35,7 +35,7 @@ const Hero = () => {
                     </div>
 
                     {/* MAIN HEADING */}
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+                    <h1 className="text-5xl md:text-7xl sm:text-center sm:mx-auto lg:text-9xl font-bold tracking-tight lg:text-left">
                       <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
                         Your dental
                       </span>
@@ -50,7 +50,7 @@ const Hero = () => {
                     </h1>
 
                     {/* SUBTITLE */}
-                    <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-medium">
+                    <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-medium sm:text-center sm:mx-auto lg:text-left">
                       Chat with our AI dental assistant for instant advice, book
                       smart appointments, and get personalized care
                       recommendations. Available 24/7.
@@ -58,14 +58,18 @@ const Hero = () => {
                   </div>
                   {/* Call to Action */}
 
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4  ">
                     <SignUpButton mode="modal">
-                      <Button size={"lg"}>
-                        <MicIcon className="mr-2 size-5" /> Talk to Chip
+                      <Button size={"lg"} className="sm:mx-auto lg:text-left">
+                        <MicIcon className="lg:mr-2 lg:size-5" /> Talk to Chip
                       </Button>
                     </SignUpButton>
                     <SignUpButton mode="modal">
-                      <Button variant={"outline"} size={"lg"}>
+                      <Button
+                        variant={"outline"}
+                        size={"lg"}
+                        className="sm:mx-auto lg:text-left"
+                      >
                         <Calendar className="mr-2 size-5" /> Book an Appointment
                       </Button>
                     </SignUpButton>
