@@ -29,7 +29,7 @@ model User{
   // role       Role       @default(USER)
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
-  // appointments Appointment[]
+  appointments Appointment[]
 }
 
 model Doctor{
@@ -46,11 +46,31 @@ model Doctor{
   gender      Gender
   isActive    Boolean     @default(true)
   isAcceptingNewPatients Boolean @default(true)
-  // appointments Appointment[]
-}
+  appointments Appointment[] 
+  }
 
 enum Gender {
   MALE
   FEMALE
   OTHER
+}
+
+model Appointment{
+  id          Int       @id @default(autoincrement())
+  appointmentDate DateTime
+  reason      String
+  status      AppointmentStatus @default(SCHEDULED)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  //Foreign Keys
+  userId      Int
+  doctorId    Int
+  //Relations
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  doctor      Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+}
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
 }
