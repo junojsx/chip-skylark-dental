@@ -29,7 +29,8 @@ model User{
   // role       Role       @default(USER)
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
-  appointments Appointment[]
+  appointments Appointment[] //array because user can have multiple appointments
+  @@map("users") //see users as table name in db
 }
 
 model Doctor{
@@ -46,7 +47,9 @@ model Doctor{
   gender      Gender
   isActive    Boolean     @default(true)
   isAcceptingNewPatients Boolean @default(true)
-  appointments Appointment[] 
+  appointments Appointment[] //array because doctor can have multiple appointments
+
+  @@map("doctors")
   }
 
 enum Gender {
@@ -68,6 +71,8 @@ model Appointment{
   //Relations
   user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   doctor      Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@map("appointments")
 }
 enum AppointmentStatus {
   SCHEDULED
